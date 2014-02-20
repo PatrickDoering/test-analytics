@@ -62,6 +62,11 @@
       <type>pom</type>
     </dependency>
     <dependency>
+      <groupId>com.google.appengine</groupId>
+      <artifactId>appengine-api-1.0-sdk</artifactId>
+      <version>1.8.0</version>
+    </dependency>
+    <dependency>
       <groupId>javax.transaction</groupId>
       <artifactId>jta</artifactId>
       <version>1.1</version>
@@ -150,7 +155,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
-        <version>2.1-beta-1</version>
+        <version>2.1.1</version>
         <configuration>
           <webResources>
             <resource>
@@ -232,6 +237,9 @@
             <type>pom</type>
           </dependency>
         </dependencies>
+        <configuration>
+          <splitJars>true</splitJars>
+        </configuration>
       </plugin>
 
       <!-- Upload application to the appspot automatically by executing release:perform -->
@@ -259,7 +267,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <gwt.version>2.3.0</gwt.version>
-    <gae.version>1.5.4</gae.version>
+    <gae.version>1.8.0</gae.version>
     <gae.application.version>test</gae.application.version>
     <gae.port>8080</gae.port>
     <gwt.style>DETAILED</gwt.style>
