@@ -46,7 +46,7 @@ NOTES
   * irc convo log with some relevant info: http://meetbot.eucalyptus.com/channel-logs/freenode/%23appscale/%23appscale.2013-06-24.log
 * app and its data SHOULD persist across reboots (fingers crossed)
 * you need to manually relocate the app AGAIN if you changed the ports it should be listening on (dafuq?! >.<)
-* SSL certs are different after each cluster start-up (minor issue compared to the ones listed above *grumblegrumble*)
+* SSL certs are different after each cluster start-up (minor issue compared to the ones listed above \*_grumblegrumble_\*)
 
 TL;DR: appscale sucks
 
