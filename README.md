@@ -32,7 +32,7 @@ How to: single-node KVM AppScale cluster + Test Analytics
 * `cd test-analytics/testanalytics_frontend && mvn gae:unpack && mvn gae:run` + another cup of your favorite hot drink
 * press ^C after the dev servers starts up (no maven target to build the package o.O)
 * `mv target/{test-analytics-1.0-SNAPSHOT,war}` to make appscale happy
-* `cd && appscale deploy test-analytics/testanalytics_frontend/target/` and enter some e-mail address again (no idea what is it good for)
+* `cd && appscale deploy test-analytics/testanalytics_frontend/target/` and enter some e-mail address again (no idea what it's good for)
 * after the app starts up successfully `appscale relocate test-analytics 80 443` to make the app available on standard ports
 * ???
 * profit! (or not, continue reading below)
@@ -41,9 +41,11 @@ How to: single-node KVM AppScale cluster + Test Analytics
 NOTES
 =====
 * appscale 1.14.0 does NOT work, so do not bother trying... (at least the KVM image)
+  * hangs at waiting for dashboard app to come up or smth like that
 * cluster does not autostart after reboot BY DESIGN - you have to manually log into the head node and do `appscale down && appscale up` (cause apparently something is running o.O)
   * irc convo log with some relevant info: http://meetbot.eucalyptus.com/channel-logs/freenode/%23appscale/%23appscale.2013-06-24.log
 * app and its data SHOULD persist across reboots (fingers crossed)
 * you need to manually relocate the app AGAIN if you changed the ports it should be listening on (dafuq?! >.<)
+* SSL certs are different after each cluster start-up (minor issue compared to the ones listed above *grumblegrumble*)
 
 TL;DR: appscale sucks
