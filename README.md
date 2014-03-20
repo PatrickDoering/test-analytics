@@ -49,3 +49,30 @@ NOTES
 * SSL certs are different after each cluster start-up (minor issue compared to the ones listed above *grumblegrumble*)
 
 TL;DR: appscale sucks
+
+
+Y U NO USE RHEL?!
+=================
+
+![Y U NO guy](http://i3.kym-cdn.com/entries/icons/original/000/004/006/y-u-no-guy.jpg)
+
+“Ubuntu is an ancient african word, meaning 'I can't configure Debian.'”
+  ~ definition of Ubuntu from urbandictionary.com
+
+rhel6.5
+-------
+  * out-of-date python (2.7 required for appscale, 2.6 in rhel6)
+  * requires external repositories/specfiles for multiple packages (eg. rabbitmq, cassandra, zookeeper)
+  * incompatible version of monit in repos, had to be built from source
+  * almost every package has a version different from the corresponding ubuntu pkg - possibly incompatible versions
+  * various smaller "bugs" not present in ubuntu like missing files and directories during cluster start-up (possibly due to failing python scripts)
+  * rake unit tests for appscale failing due to outdated python
+  * when attempting to start appscale cluster anyway, the appcontroller can't run/reach the cassandra db (it should start it automatically but doesn't and even when it's started manually nothing happens)
+  * all the cluster core services are getting killed wihout being started again (nginx, memcached, monit, ...)
+  * the whole thing just doesn't work -.-"
+
+rhel7
+-----
+  * missing erlang, mock, django, ejabberd, rabbitmq, python-pip, etc...
+  * incompatible ruby (1.8 required, has 2.0) - dependencies fail to build ("rcov" gem)
+    * this is a serious problem as the whole appcontroller server is written in ruby
