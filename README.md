@@ -56,7 +56,9 @@ Y U NO USE RHEL?!
 
 ![Y U NO guy](http://i3.kym-cdn.com/entries/icons/original/000/004/006/y-u-no-guy.jpg)
 
-“Ubuntu is an ancient african word, meaning 'I can't configure Debian.'”
+```
+Ubuntu is an ancient african word, meaning 'I can't configure Debian.'
+```
   ~ definition of Ubuntu from urbandictionary.com
 
 rhel6.5
