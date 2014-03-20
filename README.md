@@ -20,10 +20,12 @@ How to: single-node KVM AppScale cluster + Test Analytics
 * modify cluster config file `vi AppScalefile`
   * change the IPs in ips_layout to the VM IP
   * to make your life easier, consider adding these lines:
+
     ```
     admin_user: root@localho.st
     admin_pass: 123456
     ```
+
 * `appscale up`, enter admin e-mail and password (eg. root@localho.st and 123456) when/if prompted
 * you should now have an appscale cluster up and running
 * `git clone https://github.com/saironiq/test-analytics.git`
