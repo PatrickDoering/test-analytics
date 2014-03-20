@@ -1,5 +1,14 @@
-How to set up a single-node AppScale cluster in KVM and run Test Analytics on it
-================================================================================
+test-analytics
+==============
+
+A fork of http://code.google.com/p/test-analytics/
+
+License
+=======
+Apache License 2.0 (as specified at http://code.google.com/p/test-analytics/)
+
+How to: single-node KVM AppScale cluster + Test Analytics
+=========================================================
 
 * download KVM image of AppScale-ready VM http://download.appscale.com/apps/AppScale%201.13.0%20KVM%20Image
 * `tar xvzf appscale-1.13.0-kvm.tar.gz` and go enjoy a cup of tea/coffee
