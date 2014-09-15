@@ -12,7 +12,7 @@ How to: single-node KVM AppScale cluster + Test Analytics
 
 * download KVM image of AppScale-ready VM http://download.appscale.com/apps/AppScale%201.13.0%20KVM%20Image
 * `tar xvzf appscale-1.13.0-kvm.tar.gz` and go enjoy a cup of tea/coffee
-  * do not bother using your pc for anything else while this is running (IMMV, depends on how bad your IO scheduler is)
+  * do not bother using your pc for anything else while this is running (YMMV, depends on how bad your IO scheduler is)
 * import the .img file as a new VM in virt-manager or whatever, at least 3gb ram recommended
 * start the VM
 * login as `root` with password `appscale`
