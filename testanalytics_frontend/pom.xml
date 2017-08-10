@@ -22,6 +22,8 @@
       <groupId>com.google.code.gwt-dnd</groupId>
       <artifactId>gwt-dnd</artifactId>
       <version>3.1.1</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/gwt-dnd-3.1.1.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>com.google.inject</groupId>
@@ -223,7 +225,7 @@
         </dependencies>
       </plugin>
 
-      <!-- Maven-gae-plugin. Type "mvn gae:run" to run project, "mvn gae:deploy" 
+      <!-- Maven-gae-plugin. Type "mvn gae:run" to run project, "mvn gae:deploy"
         to upload to GAE. -->
       <plugin>
         <groupId>net.kindleit</groupId>
